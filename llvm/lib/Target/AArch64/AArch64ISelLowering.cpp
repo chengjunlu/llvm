@@ -9851,9 +9851,10 @@ static bool isEXTMask(ArrayRef<int> M, EVT VT, bool &ReverseEXT,
   APInt ExpectedElt = APInt(MaskBits, *FirstRealElt + 1);
   // The following shuffle indices must be the successive elements after the
   // first real element.
-  const int *FirstWrongElt = std::find_if(FirstRealElt + 1, M.end(),
-      [&](int Elt) {return Elt != ExpectedElt++ && Elt != -1;});
-  if (FirstWrongElt != M.end())
+  bool FoundWrongElt = std::any_of(FirstRealElt + 1, M.end(), [&](int Elt) {
+    return Elt != ExpectedElt++ && Elt != -1;
+  });
+  if (FoundWrongElt)
     return false;
 
   // The index of an EXT is the first element if it is not UNDEF.
@@ -19510,7 +19511,7 @@ static SDValue performDupLane128Combine(SDNode *N, SelectionDAG &DAG) {
 
   uint64_t IdxInsert = Insert.getConstantOperandVal(2);
   uint64_t IdxDupLane = N->getConstantOperandVal(1);
-  if (IdxInsert != IdxDupLane)
+  if (IdxInsert != 0 || IdxDupLane != 0)
     return SDValue();
 
   SDValue Bitcast = Insert.getOperand(1);

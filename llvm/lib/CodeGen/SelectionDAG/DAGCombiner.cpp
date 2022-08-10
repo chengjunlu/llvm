@@ -1204,19 +1204,14 @@ CommitTargetLoweringOpt(const TargetLowering::TargetLoweringOpt &TLO) {
   LLVM_DEBUG(dbgs() << "\nReplacing.2 "; TLO.Old.dump(&DAG);
              dbgs() << "\nWith: "; TLO.New.dump(&DAG); dbgs() << '\n');
 
-  // Replace all uses.  If any nodes become isomorphic to other nodes and
-  // are deleted, make sure to remove them from our worklist.
-  WorklistRemover DeadNodes(*this);
+  // Replace all uses.
   DAG.ReplaceAllUsesOfValueWith(TLO.Old, TLO.New);
 
   // Push the new node and any (possibly new) users onto the worklist.
   AddToWorklistWithUsers(TLO.New.getNode());
 
-  // Finally, if the node is now dead, remove it from the graph.  The node
-  // may not be dead if the replacement process recursively simplified to
-  // something else needing this node.
-  if (TLO.Old->use_empty())
-    deleteAndRecombine(TLO.Old.getNode());
+  // Finally, if the node is now dead, remove it from the graph.
+  recursivelyDeleteUnusedNodes(TLO.Old.getNode());
 }
 
 /// Check the specified integer node value to see if it can be simplified or if
@@ -6353,6 +6348,24 @@ SDValue DAGCombiner::visitAND(SDNode *N) {
       }
 
       return SDValue(N, 0); // Return N so it doesn't get rechecked!
+    }
+  }
+
+  if (N0.getOpcode() == ISD::EXTRACT_SUBVECTOR && N0.hasOneUse() && N1C &&
+      ISD::isExtOpcode(N0.getOperand(0).getOpcode())) {
+    SDValue Ext = N0.getOperand(0);
+    EVT ExtVT = Ext->getValueType(0);
+    SDValue Extendee = Ext->getOperand(0);
+
+    unsigned ScalarWidth = Extendee.getValueType().getScalarSizeInBits();
+    if (N1C->getAPIntValue().isMask(ScalarWidth)) {
+      //    (and (extract_subvector (zext|anyext|sext v) _) iN_mask)
+      // => (extract_subvector (iN_zeroext v))
+      SDValue ZeroExtExtendee =
+          DAG.getNode(ISD::ZERO_EXTEND, SDLoc(N), ExtVT, Extendee);
+
+      return DAG.getNode(ISD::EXTRACT_SUBVECTOR, SDLoc(N), VT, ZeroExtExtendee,
+                         N0.getOperand(1));
     }
   }
 
@@ -19618,6 +19631,23 @@ SDValue DAGCombiner::visitINSERT_VECTOR_ELT(SDNode *N) {
 
       // Failed to find a match in the chain - bail.
       break;
+    }
+
+    // See if we can fill in the missing constant elements as zeros.
+    // TODO: Should we do this for any constant?
+    APInt DemandedZeroElts = APInt::getZero(NumElts);
+    for (unsigned I = 0; I != NumElts; ++I)
+      if (!Ops[I])
+        DemandedZeroElts.setBit(I);
+
+    if (DAG.MaskedVectorIsZero(InVec, DemandedZeroElts)) {
+      SDValue Zero = VT.isInteger() ? DAG.getConstant(0, DL, MaxEltVT)
+                                    : DAG.getConstantFP(0, DL, MaxEltVT);
+      for (unsigned I = 0; I != NumElts; ++I)
+        if (!Ops[I])
+          Ops[I] = Zero;
+
+      return CanonicalizeBuildVector(Ops);
     }
   }
 
