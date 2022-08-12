@@ -530,6 +530,8 @@ add_custom_target(deploy-sycl-toolchain
   install-mlir-translate
   install-tblgen-lsp-server
   install-mlir-cpu-runner
+  install-llvm-spirv-headers
+  install-LLVMSPIRVLib
 )
 
 # SYCL Runtime documentation

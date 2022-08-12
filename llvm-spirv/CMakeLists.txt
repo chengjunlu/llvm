@@ -128,6 +128,7 @@ install(
     ${LLVM_SPIRV_INCLUDE_DIRS}/LLVMSPIRVLib.h
     ${LLVM_SPIRV_INCLUDE_DIRS}/LLVMSPIRVOpts.h
     ${LLVM_SPIRV_INCLUDE_DIRS}/LLVMSPIRVExtensions.inc
+  COMPONENT llvm-spirv-headers
   DESTINATION
     ${CMAKE_INSTALL_PREFIX}/include/LLVMSPIRVLib
 )
@@ -139,3 +140,6 @@ install(
   DESTINATION
     ${CMAKE_INSTALL_PREFIX}/lib${LLVM_LIBDIR_SUFFIX}/pkgconfig
 )
+
+add_llvm_install_targets(install-llvm-spirv-headers
+        COMPONENT llvm-spirv-headers)
