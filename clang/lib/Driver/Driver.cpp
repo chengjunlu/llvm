@@ -1834,7 +1834,7 @@ void Driver::generateCompilationDiagnostics(
     return;
 
   bool IsLLD = false;
-  ArgStringList SavedTemps;
+  TempFileList SavedTemps;
   if (FailingCommand.getCreator().isLinkJob()) {
     C.getDefaultToolChain().GetLinkerPath(&IsLLD);
     if (!IsLLD || Level < 2)
@@ -1983,8 +1983,8 @@ void Driver::generateCompilationDiagnostics(
     }
   }
 
-  for (const char *TempFile : SavedTemps)
-    C.addTempFile(TempFile);
+  for (const auto& TempFile : SavedTemps)
+    C.addTempFile(TempFile.first);
 
   // Assume associated files are based off of the first temporary file.
   CrashReportInfo CrashInfo(TempFiles[0].first, VFS);
