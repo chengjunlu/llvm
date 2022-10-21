@@ -39,6 +39,8 @@ public:
 
   RegisterScheduler(const char *N, const char *D, FunctionPassCtor C)
       : MachinePassRegistryNode(N, D, C) {
+//    raw_ostream& OS = outs();
+//    OS << "johnlu here RegisterScheduler:" << this->getName() << "\n";
     Registry.Add(this);
   }
   ~RegisterScheduler() { Registry.Remove(this); }

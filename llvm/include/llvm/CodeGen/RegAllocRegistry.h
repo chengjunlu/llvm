@@ -35,6 +35,8 @@ public:
 
   RegisterRegAllocBase(const char *N, const char *D, FunctionPassCtor C)
       : MachinePassRegistryNode(N, D, C) {
+//    raw_ostream& OS = outs();
+//    OS << "johnlu here RegisterRegAllocBase<" << typeid(SubClass).name() << ">@" << this << " Registry@" << &Registry << " :" << this->getName() << "\n";
     Registry.Add(this);
   }
 
@@ -54,6 +56,8 @@ public:
   static void setDefault(FunctionPassCtor C) { Registry.setDefault(C); }
 
   static void setListener(MachinePassRegistryListener<FunctionPassCtor> *L) {
+//    raw_ostream& OS = outs();
+//    OS << "johnlu here RegisterRegAllocBase::setListener Registry@" << &Registry << " :" << L << "\n";
     Registry.setListener(L);
   }
 };

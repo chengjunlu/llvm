@@ -165,6 +165,7 @@ SPIRVLowerBitCastToNonStandardTypePass::run(Function &F,
            !isValidVectorSize(OldVecSize / VecFactor))
       VecFactor *= 2;
     if (OldVecSize % VecFactor != 0) {
+      I->print(llvm::outs());
       report_fatal_error(Twine("Invalid vector size for fixup: ") +
                          Twine(OldVecSize));
       return PreservedAnalyses::none();

@@ -153,6 +153,8 @@ public:
 
   MachineSchedRegistry(const char *N, const char *D, ScheduleDAGCtor C)
       : MachinePassRegistryNode(N, D, C) {
+//    raw_ostream& OS = outs();
+//    OS << "johnlu here MachineSchedRegistry:" << this->getName() << "\n";
     Registry.Add(this);
   }
 

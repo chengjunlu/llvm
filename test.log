@@ -1,0 +1,616 @@
+(johnlu) guangyey@guangyey-PC:~/CLionProjects/intel-llvm$ python
+Python 3.9.12 (main, Jun  1 2022, 11:38:51)
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import torch
+johnlu here addLiteralOption@0x7f1e340d2d00 Name:Disabled findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340d2d00 Name:Arguments findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e340d2d00 Name:Structure findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e340d2d00 Name:Executions findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e340d2d00 Name:Details findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e340d3940 Name:quiet findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340d3940 Name:diff findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e340d3940 Name:diff-quiet findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e340d3940 Name:cdiff findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e340d3940 Name:cdiff-quiet findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e340d3940 Name:dot-cfg findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e340d3940 Name:dot-cfg-quiet findOption(Name):6 Values.size():6
+johnlu here addLiteralOption@0x7f1e340d3940 Name: findOption(Name):7 Values.size():7
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:Accelerate findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:Darwin_libsystem_m findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:LIBMVEC-X86 findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:MASSV findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e340d60a0 Name:SVML findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e340d7c60 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340d7c60 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e340d7c60 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e340d7c60 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e340d7820 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340d7820 Name:graph findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e340d7820 Name:text findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e340dcee0 Name:att findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e340dcee0 Name:intel findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e340e0b20 Registry@0x7f1e340deb10 :default
+johnlu here initlize RegisterPassParser@0x7f1e340e0908 :default
+johnlu here addLiteralOption@0x7f1e340e0910 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e340deb10 :0x7f1e340e0908
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e340deaf0 :0x7f1e340e0648
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e340e0560 Registry@0x7f1e340deb10 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0908 :basic
+johnlu here addLiteralOption@0x7f1e340e0910 Name:basic findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e340e0520 Registry@0x7f1e340deb10 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0908 :greedy
+johnlu here addLiteralOption@0x7f1e340e0910 Name:greedy findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e340e04e0 Registry@0x7f1e340deb10 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0908 :fast
+johnlu here addLiteralOption@0x7f1e340e0910 Name:fast findOption(Name):3 Values.size():3
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e340e04a0 Registry@0x7f1e340deaf0 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0648 :basic
+johnlu here addLiteralOption@0x7f1e340e0650 Name:basic findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e340e0460 Registry@0x7f1e340deaf0 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0648 :greedy
+johnlu here addLiteralOption@0x7f1e340e0650 Name:greedy findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e340e0420 Registry@0x7f1e340deaf0 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e340e0648 :fast
+johnlu here addLiteralOption@0x7f1e340e0650 Name:fast findOption(Name):2 Values.size():2
+johnlu here MachineSchedRegistry:si
+johnlu here MachineSchedRegistry:gcn-max-occupancy
+johnlu here MachineSchedRegistry:gcn-max-occupancy-experimental
+johnlu here MachineSchedRegistry:gcn-minreg
+johnlu here MachineSchedRegistry:gcn-ilp
+johnlu here MachineSchedRegistry:r600
+johnlu here addLiteralOption@0x7f1e341786c0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341786c0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341786c0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34178460 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34178460 Name:Disable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34178460 Name:Apple findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34178460 Name:Dwarf findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e34178200 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34178200 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34178200 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34177ec0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34177ec0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34177ec0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34177b80 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34177b80 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34177b80 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34177920 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34177920 Name:All findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34177920 Name:Abstract findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341776c0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341776c0 Name:Ranges findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341776c0 Name:Expressions findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341776c0 Name:Form findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e341776c0 Name:Disabled findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e34178fa0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34178fa0 Name:legalizations findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34178fa0 Name:legalizations+artifactcombiners findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341794a0 Name:regbankselect-fast findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341794a0 Name:regbankselect-greedy findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :default
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterScheduler:fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :fast
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:fast findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:linearize
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :linearize
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:linearize findOption(Name):2 Values.size():2
+johnlu here RegisterScheduler:list-burr
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :list-burr
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:list-burr findOption(Name):3 Values.size():3
+johnlu here RegisterScheduler:source
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :source
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:source findOption(Name):4 Values.size():4
+johnlu here RegisterScheduler:list-hybrid
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :list-hybrid
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:list-hybrid findOption(Name):5 Values.size():5
+johnlu here RegisterScheduler:list-ilp
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :list-ilp
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:list-ilp findOption(Name):6 Values.size():6
+johnlu here RegisterScheduler:vliw-td
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417a5c8 :vliw-td
+johnlu here addLiteralOption@0x7f1e3417a5d0 Name:vliw-td findOption(Name):7 Values.size():7
+johnlu here addLiteralOption@0x7f1e3417de00 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3417de00 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3417de00 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3417de00 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e3417dba0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3417dba0 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3417dba0 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3417dba0 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e3417e7c0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3417e7c0 Name:pgo findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3417e7c0 Name:all findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :r600
+johnlu here addLiteralOption@0x7f1e3417f390 Name:r600 findOption(Name):0 Values.size():0
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :gcn-ilp
+johnlu here addLiteralOption@0x7f1e3417f390 Name:gcn-ilp findOption(Name):1 Values.size():1
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :gcn-minreg
+johnlu here addLiteralOption@0x7f1e3417f390 Name:gcn-minreg findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :gcn-max-occupancy-experimental
+johnlu here addLiteralOption@0x7f1e3417f390 Name:gcn-max-occupancy-experimental findOption(Name):3 Values.size():3
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :gcn-max-occupancy
+johnlu here addLiteralOption@0x7f1e3417f390 Name:gcn-max-occupancy findOption(Name):4 Values.size():4
+johnlu here initlize RegisterPassParser@0x7f1e3417f388 :si
+johnlu here addLiteralOption@0x7f1e3417f390 Name:si findOption(Name):5 Values.size():5
+johnlu here MachineSchedRegistry:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417f388 :default
+johnlu here addLiteralOption@0x7f1e3417f390 Name:default findOption(Name):6 Values.size():6
+johnlu here MachineSchedRegistry:converge
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417f388 :converge
+johnlu here addLiteralOption@0x7f1e3417f390 Name:converge findOption(Name):7 Values.size():7
+johnlu here MachineSchedRegistry:ilpmax
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417f388 :ilpmax
+johnlu here addLiteralOption@0x7f1e3417f390 Name:ilpmax findOption(Name):8 Values.size():8
+johnlu here MachineSchedRegistry:ilpmin
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417f388 :ilpmin
+johnlu here addLiteralOption@0x7f1e3417f390 Name:ilpmin findOption(Name):9 Values.size():9
+johnlu here MachineSchedRegistry:shuffle
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e3417f388 :shuffle
+johnlu here addLiteralOption@0x7f1e3417f390 Name:shuffle findOption(Name):10 Values.size():10
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e34181920 Registry@0x7f1e341818f0 :basic
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e34181960 Registry@0x7f1e341818f0 :fast
+johnlu here addLiteralOption@0x7f1e34182260 Name:default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34182260 Name:size findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34182260 Name:speed findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e34181a80 Registry@0x7f1e341818f0 :greedy
+johnlu here addLiteralOption@0x7f1e34185ac0 Name:always findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34185ac0 Name:never findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34185ac0 Name: findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341854e0 Name:0 findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341854e0 Name:1 findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341854e0 Name:2 findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34184c20 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34184c20 Name:steens findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34184c20 Name:anders findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34184c20 Name:both findOption(Name):3 Values.size():3
+johnlu here initlize RegisterPassParser@0x7f1e341842c8 :greedy
+johnlu here addLiteralOption@0x7f1e341842d0 Name:greedy findOption(Name):0 Values.size():0
+johnlu here initlize RegisterPassParser@0x7f1e341842c8 :fast
+johnlu here addLiteralOption@0x7f1e341842d0 Name:fast findOption(Name):1 Values.size():1
+johnlu here initlize RegisterPassParser@0x7f1e341842c8 :basic
+johnlu here addLiteralOption@0x7f1e341842d0 Name:basic findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e341818f0 :0x7f1e341842c8
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e341841e0 Registry@0x7f1e341818f0 :default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e341842c8 :default
+johnlu here addLiteralOption@0x7f1e341842d0 Name:default findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e3418d9c0 Name:default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3418d9c0 Name:release findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3418d9c0 Name:development findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34190160 Name:Function findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34190160 Name:Module findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3418ff00 Name:Original findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3418ff00 Name:AlwaysInline findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3418ff00 Name:NeverInline findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3418fca0 Name:Line findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3418fca0 Name:LineColumn findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3418fca0 Name:LineDiscriminator findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3418fca0 Name:LineColumnDiscriminator findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e34192b60 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34192b60 Name:steens findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34192b60 Name:anders findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34192b60 Name:both findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e34191940 Name:all findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34191940 Name:module findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34191940 Name:cgscc findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34191940 Name:none findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e34197280 Name:never findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34197280 Name:runtime findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e34197280 Name:always findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e34195940 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e34195940 Name:global findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3419b0a0 Name:scalar-epilogue findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3419b0a0 Name:predicate-else-scalar-epilogue findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3419b0a0 Name:predicate-dont-vectorize findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3419c720 Name:off findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3419c720 Name:preferred findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3419c720 Name:on findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3419f220 Name:never findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e3419f220 Name:cheap findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e3419f220 Name:unusedindvarinloop findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e3419f220 Name:noharduse findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e3419f220 Name:always findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e341a1400 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341a1400 Name:preindexed findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341a1400 Name:postindexed findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341a3180 Name:column-major findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341a3180 Name:row-major findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341a6420 Name:locations findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341a6420 Name:location+variables findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341aa040 Name:basic findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341aa040 Name:verbose findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341abe00 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341abe00 Name:all-non-critical findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341abe00 Name:all findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341ac0a0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341ac0a0 Name:bb findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341ac0a0 Name:rn findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e341ae2e0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e341ae2e0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e341ae2e0 Name:Disable findOption(Name):2 Values.size():2
+RUNNING 0 LOADC 0
+RUNNING 0 LOADC 0
+RUNNING 0 LOADC 0
+>>> import triton
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e0b6c4ec0 Registry@0x7f1e0b6c2eb0 :default
+johnlu here initlize RegisterPassParser@0x7f1e0b6c4ca8 :default
+johnlu here addLiteralOption@0x7f1e0b6c4cb0 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e0b6c2eb0 :0x7f1e0b6c4ca8
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e0b6c2e90 :0x7f1e0b6c49e8
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e0b6c4900 Registry@0x7f1e0b6c2eb0 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c4ca8 :basic
+johnlu here addLiteralOption@0x7f1e0b6c4cb0 Name:basic findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e0b6c48c0 Registry@0x7f1e0b6c2eb0 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c4ca8 :greedy
+johnlu here addLiteralOption@0x7f1e0b6c4cb0 Name:greedy findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e0b6c4880 Registry@0x7f1e0b6c2eb0 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c4ca8 :fast
+johnlu here addLiteralOption@0x7f1e0b6c4cb0 Name:fast findOption(Name):3 Values.size():3
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e0b6c4840 Registry@0x7f1e0b6c2e90 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c49e8 :basic
+johnlu here addLiteralOption@0x7f1e0b6c49f0 Name:basic findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e0b6c4800 Registry@0x7f1e0b6c2e90 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c49e8 :greedy
+johnlu here addLiteralOption@0x7f1e0b6c49f0 Name:greedy findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e0b6c47c0 Registry@0x7f1e0b6c2e90 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6c49e8 :fast
+johnlu here addLiteralOption@0x7f1e0b6c49f0 Name:fast findOption(Name):2 Values.size():2
+johnlu here MachineSchedRegistry:si
+johnlu here MachineSchedRegistry:gcn-max-occupancy
+johnlu here MachineSchedRegistry:gcn-max-occupancy-experimental
+johnlu here MachineSchedRegistry:gcn-minreg
+johnlu here MachineSchedRegistry:gcn-ilp
+johnlu here MachineSchedRegistry:r600
+johnlu here addLiteralOption@0x7f1e0b6ca220 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6ca220 Name:legalizations findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6ca220 Name:legalizations+artifactcombiners findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6ca720 Name:regbankselect-fast findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6ca720 Name:regbankselect-greedy findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :default
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterScheduler:fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :fast
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:fast findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:linearize
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :linearize
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:linearize findOption(Name):2 Values.size():2
+johnlu here RegisterScheduler:list-burr
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :list-burr
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:list-burr findOption(Name):3 Values.size():3
+johnlu here RegisterScheduler:source
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :source
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:source findOption(Name):4 Values.size():4
+johnlu here RegisterScheduler:list-hybrid
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :list-hybrid
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:list-hybrid findOption(Name):5 Values.size():5
+johnlu here RegisterScheduler:list-ilp
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :list-ilp
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:list-ilp findOption(Name):6 Values.size():6
+johnlu here RegisterScheduler:vliw-td
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6cc8c8 :vliw-td
+johnlu here addLiteralOption@0x7f1e0b6cc8d0 Name:vliw-td findOption(Name):7 Values.size():7
+johnlu here addLiteralOption@0x7f1e0b6d0260 Name:Function findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d0260 Name:Module findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d0000 Name:Original findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d0000 Name:AlwaysInline findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d0000 Name:NeverInline findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6cfda0 Name:Line findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6cfda0 Name:LineColumn findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6cfda0 Name:LineDiscriminator findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6cfda0 Name:LineColumnDiscriminator findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6d2c60 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d2c60 Name:steens findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d2c60 Name:anders findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d2c60 Name:both findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6d1a40 Name:all findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d1a40 Name:module findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d1a40 Name:cgscc findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d1a40 Name:none findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6d6cc0 Name:scalar-epilogue findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d6cc0 Name:predicate-else-scalar-epilogue findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d6cc0 Name:predicate-dont-vectorize findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d8340 Name:off findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d8340 Name:preferred findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d8340 Name:on findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d9ae0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d9ae0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d9ae0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d9880 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d9880 Name:Disable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d9880 Name:Apple findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d9880 Name:Dwarf findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6d9620 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d9620 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d9620 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d92e0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d92e0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d92e0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d8fa0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d8fa0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d8fa0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d8d40 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d8d40 Name:All findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d8d40 Name:Abstract findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d8ae0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6d8ae0 Name:Ranges findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6d8ae0 Name:Expressions findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6d8ae0 Name:Form findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6d8ae0 Name:Disabled findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0b6db6c0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6db6c0 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6db6c0 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6db6c0 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6db460 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6db460 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6db460 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6db460 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6dbdc0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6dbdc0 Name:pgo findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6dbdc0 Name:all findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :r600
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:r600 findOption(Name):0 Values.size():0
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :gcn-ilp
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:gcn-ilp findOption(Name):1 Values.size():1
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :gcn-minreg
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:gcn-minreg findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :gcn-max-occupancy-experimental
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:gcn-max-occupancy-experimental findOption(Name):3 Values.size():3
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :gcn-max-occupancy
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:gcn-max-occupancy findOption(Name):4 Values.size():4
+johnlu here initlize RegisterPassParser@0x7f1e0b6dc988 :si
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:si findOption(Name):5 Values.size():5
+johnlu here MachineSchedRegistry:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6dc988 :default
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:default findOption(Name):6 Values.size():6
+johnlu here MachineSchedRegistry:converge
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6dc988 :converge
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:converge findOption(Name):7 Values.size():7
+johnlu here MachineSchedRegistry:ilpmax
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6dc988 :ilpmax
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:ilpmax findOption(Name):8 Values.size():8
+johnlu here MachineSchedRegistry:ilpmin
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6dc988 :ilpmin
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:ilpmin findOption(Name):9 Values.size():9
+johnlu here MachineSchedRegistry:shuffle
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6dc988 :shuffle
+johnlu here addLiteralOption@0x7f1e0b6dc990 Name:shuffle findOption(Name):10 Values.size():10
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e0b6dee40 Registry@0x7f1e0b6dee20 :basic
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e0b6dee80 Registry@0x7f1e0b6dee20 :fast
+johnlu here addLiteralOption@0x7f1e0b6df780 Name:default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6df780 Name:size findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6df780 Name:speed findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e0b6defa0 Registry@0x7f1e0b6dee20 :greedy
+johnlu here addLiteralOption@0x7f1e0b6e2fe0 Name:always findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6e2fe0 Name:never findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6e2fe0 Name: findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6e2a00 Name:0 findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6e2a00 Name:1 findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6e2a00 Name:2 findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6e2140 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6e2140 Name:steens findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6e2140 Name:anders findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6e2140 Name:both findOption(Name):3 Values.size():3
+johnlu here initlize RegisterPassParser@0x7f1e0b6e17e8 :greedy
+johnlu here addLiteralOption@0x7f1e0b6e17f0 Name:greedy findOption(Name):0 Values.size():0
+johnlu here initlize RegisterPassParser@0x7f1e0b6e17e8 :fast
+johnlu here addLiteralOption@0x7f1e0b6e17f0 Name:fast findOption(Name):1 Values.size():1
+johnlu here initlize RegisterPassParser@0x7f1e0b6e17e8 :basic
+johnlu here addLiteralOption@0x7f1e0b6e17f0 Name:basic findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e0b6dee20 :0x7f1e0b6e17e8
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e0b6e1700 Registry@0x7f1e0b6dee20 :default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6e17e8 :default
+johnlu here addLiteralOption@0x7f1e0b6e17f0 Name:default findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6eb340 Name:default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6eb340 Name:release findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6eb340 Name:development findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6ee6c0 Name:never findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6ee6c0 Name:cheap findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6ee6c0 Name:unusedindvarinloop findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6ee6c0 Name:noharduse findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6ee6c0 Name:always findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0b6f08a0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6f08a0 Name:preindexed findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6f08a0 Name:postindexed findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6f2620 Name:column-major findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6f2620 Name:row-major findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6f5b60 Name:locations findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6f5b60 Name:location+variables findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6fa080 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6fa080 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6fa080 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6fa080 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6f9c40 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6f9c40 Name:graph findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6f9c40 Name:text findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6fbc80 Name:basic findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6fbc80 Name:verbose findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6fe980 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6fe980 Name:bb findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6fe980 Name:rn findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:Accelerate findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:Darwin_libsystem_m findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:LIBMVEC-X86 findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:MASSV findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0b6fff00 Name:SVML findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e0b701f00 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b701f00 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b701f00 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b702ee0 Name:Disabled findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b702ee0 Name:Arguments findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b702ee0 Name:Structure findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b702ee0 Name:Executions findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b702ee0 Name:Details findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:quiet findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:diff findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:diff-quiet findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:cdiff findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:cdiff-quiet findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:dot-cfg findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e0b703b20 Name:dot-cfg-quiet findOption(Name):6 Values.size():6
+johnlu here addLiteralOption@0x7f1e0b703b20 Name: findOption(Name):7 Values.size():7
+>>>
+>>>
+>>> exit()
+KeyboardInterrupt
+>>> import intel_extension_for_pytorch
+johnlu here addLiteralOption@0x7f1e06973040 Name:Disabled findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06973040 Name:Arguments findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06973040 Name:Structure findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e06973040 Name:Executions findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e06973040 Name:Details findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e06973c80 Name:quiet findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06973c80 Name:diff findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06973c80 Name:diff-quiet findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e06973c80 Name:cdiff findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e06973c80 Name:cdiff-quiet findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e06973c80 Name:dot-cfg findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e06973c80 Name:dot-cfg-quiet findOption(Name):6 Values.size():6
+johnlu here addLiteralOption@0x7f1e06973c80 Name: findOption(Name):7 Values.size():7
+johnlu here addLiteralOption@0x7f1e069763e0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e069763e0 Name:Accelerate findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e069763e0 Name:Darwin_libsystem_m findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e069763e0 Name:LIBMVEC-X86 findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e069763e0 Name:MASSV findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e069763e0 Name:SVML findOption(Name):5 Values.size():5
+johnlu here addLiteralOption@0x7f1e06977fa0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06977fa0 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06977fa0 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e06977fa0 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e06977b60 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06977b60 Name:graph findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06977b60 Name:text findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0697d220 Name:att findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0697d220 Name:intel findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e06980e60 Registry@0x7f1e0697ee50 :default
+johnlu here initlize RegisterPassParser@0x7f1e06980c48 :default
+johnlu here addLiteralOption@0x7f1e06980c50 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e0697ee50 :0x7f1e06980c48
+johnlu here RegisterRegAllocBase::setListener Registry@0x7f1e0697ee30 :0x7f1e06980988
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e069808a0 Registry@0x7f1e0697ee50 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980c48 :basic
+johnlu here addLiteralOption@0x7f1e06980c50 Name:basic findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e06980860 Registry@0x7f1e0697ee50 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980c48 :greedy
+johnlu here addLiteralOption@0x7f1e06980c50 Name:greedy findOption(Name):2 Values.size():2
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120SGPRRegisterRegAllocE>@0x7f1e06980820 Registry@0x7f1e0697ee50 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980c48 :fast
+johnlu here addLiteralOption@0x7f1e06980c50 Name:fast findOption(Name):3 Values.size():3
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e069807e0 Registry@0x7f1e0697ee30 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980988 :basic
+johnlu here addLiteralOption@0x7f1e06980990 Name:basic findOption(Name):0 Values.size():0
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e069807a0 Registry@0x7f1e0697ee30 :greedy
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980988 :greedy
+johnlu here addLiteralOption@0x7f1e06980990 Name:greedy findOption(Name):1 Values.size():1
+johnlu here RegisterRegAllocBase<N12_GLOBAL__N_120VGPRRegisterRegAllocE>@0x7f1e06980760 Registry@0x7f1e0697ee30 :fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06980988 :fast
+johnlu here addLiteralOption@0x7f1e06980990 Name:fast findOption(Name):2 Values.size():2
+johnlu here MachineSchedRegistry:si
+johnlu here MachineSchedRegistry:gcn-max-occupancy
+johnlu here MachineSchedRegistry:gcn-max-occupancy-experimental
+johnlu here MachineSchedRegistry:gcn-minreg
+johnlu here MachineSchedRegistry:gcn-ilp
+johnlu here MachineSchedRegistry:r600
+johnlu here addLiteralOption@0x7f1e0698b100 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698b100 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698b100 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698aea0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698aea0 Name:Disable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698aea0 Name:Apple findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698aea0 Name:Dwarf findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0698ac40 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698ac40 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698ac40 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698a900 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698a900 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698a900 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698a5c0 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698a5c0 Name:Enable findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698a5c0 Name:Disable findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698a360 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698a360 Name:All findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698a360 Name:Abstract findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698a100 Name:Default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698a100 Name:Ranges findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698a100 Name:Expressions findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698a100 Name:Form findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e0698a100 Name:Disabled findOption(Name):4 Values.size():4
+johnlu here addLiteralOption@0x7f1e0698b9e0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698b9e0 Name:legalizations findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698b9e0 Name:legalizations+artifactcombiners findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e0698bee0 Name:regbankselect-fast findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698bee0 Name:regbankselect-greedy findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :default
+johnlu here addLiteralOption@0x7f1e0698d010 Name:default findOption(Name):0 Values.size():0
+johnlu here RegisterScheduler:fast
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :fast
+johnlu here addLiteralOption@0x7f1e0698d010 Name:fast findOption(Name):1 Values.size():1
+johnlu here RegisterScheduler:linearize
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :linearize
+johnlu here addLiteralOption@0x7f1e0698d010 Name:linearize findOption(Name):2 Values.size():2
+johnlu here RegisterScheduler:list-burr
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :list-burr
+johnlu here addLiteralOption@0x7f1e0698d010 Name:list-burr findOption(Name):3 Values.size():3
+johnlu here RegisterScheduler:source
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :source
+johnlu here addLiteralOption@0x7f1e0698d010 Name:source findOption(Name):4 Values.size():4
+johnlu here RegisterScheduler:list-hybrid
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :list-hybrid
+johnlu here addLiteralOption@0x7f1e0698d010 Name:list-hybrid findOption(Name):5 Values.size():5
+johnlu here RegisterScheduler:list-ilp
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :list-ilp
+johnlu here addLiteralOption@0x7f1e0698d010 Name:list-ilp findOption(Name):6 Values.size():6
+johnlu here RegisterScheduler:vliw-td
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0698d008 :vliw-td
+johnlu here addLiteralOption@0x7f1e0698d010 Name:vliw-td findOption(Name):7 Values.size():7
+johnlu here addLiteralOption@0x7f1e0698f8c0 Name:default findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e0698f8c0 Name:development findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e0698f8c0 Name:release findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e06991840 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06991840 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06991840 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e06991840 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e069915e0 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e069915e0 Name:fraction findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e069915e0 Name:integer findOption(Name):2 Values.size():2
+johnlu here addLiteralOption@0x7f1e069915e0 Name:count findOption(Name):3 Values.size():3
+johnlu here addLiteralOption@0x7f1e06992200 Name:none findOption(Name):0 Values.size():0
+johnlu here addLiteralOption@0x7f1e06992200 Name:pgo findOption(Name):1 Values.size():1
+johnlu here addLiteralOption@0x7f1e06992200 Name:all findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :r600
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:r600 findOption(Name):0 Values.size():0
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :gcn-ilp
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:gcn-ilp findOption(Name):1 Values.size():1
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :gcn-minreg
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:gcn-minreg findOption(Name):2 Values.size():2
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :gcn-max-occupancy-experimental
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:gcn-max-occupancy-experimental findOption(Name):3 Values.size():3
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :gcn-max-occupancy
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:gcn-max-occupancy findOption(Name):4 Values.size():4
+johnlu here initlize RegisterPassParser@0x7f1e06992dc8 :si
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:si findOption(Name):5 Values.size():5
+johnlu here MachineSchedRegistry:default
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06992dc8 :default
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:default findOption(Name):6 Values.size():6
+johnlu here MachineSchedRegistry:converge
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06992dc8 :converge
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:converge findOption(Name):7 Values.size():7
+johnlu here MachineSchedRegistry:ilpmax
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06992dc8 :ilpmax
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:ilpmax findOption(Name):8 Values.size():8
+johnlu here MachineSchedRegistry:ilpmin
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06992dc8 :ilpmin
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:ilpmin findOption(Name):9 Values.size():9
+johnlu here MachineSchedRegistry:shuffle
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e06992dc8 :shuffle
+johnlu here addLiteralOption@0x7f1e06992dd0 Name:shuffle findOption(Name):10 Values.size():10
+johnlu here RegisterRegAllocBase<N4llvm16RegisterRegAllocE>@0x7f1e06995360 Registry@0x7f1e0b6dee20 :basic
+johnlu here RegisterPassParser::NotifyAdd@0x7f1e0b6e17e8 :basic
+johnlu here addLiteralOption@0x7f1e0b6e17f0 Name:basic findOption(Name):2 Values.size():4
+python: /home/guangyey/CLionProjects/intel-llvm/llvm/include/llvm/Support/CommandLine.h:848: void llvm::cl::parser<DataType>::addLiteralOption(llvm::StringRef, const DT&, llvm::StringRef) [with DT = llvm::FunctionPass* (*)(); DataType = llvm::FunctionPass* (*)()]: Assertion `findOption(Name) == Values.size() && "Option already exists!"' failed.
+Aborted (core dumped)

@@ -145,8 +145,11 @@ public:
     cl::parser<typename RegistryClass::FunctionPassCtor>::initialize();
 
     // Add existing passes to option.
+//    raw_ostream& OS = outs();
+
     for (RegistryClass *Node = RegistryClass::getList();
          Node; Node = Node->getNext()) {
+//      OS << "johnlu here initlize RegisterPassParser@" << this << " :" << Node->getName() << "\n";
       this->addLiteralOption(Node->getName(),
                       (typename RegistryClass::FunctionPassCtor)Node->getCtor(),
                              Node->getDescription());
@@ -159,6 +162,8 @@ public:
   // Implement the MachinePassRegistryListener callbacks.
   void NotifyAdd(StringRef N, typename RegistryClass::FunctionPassCtor C,
                  StringRef D) override {
+//    raw_ostream& OS = outs();
+//    OS << "johnlu here RegisterPassParser::NotifyAdd@" << this << " :" << N << "\n";
     this->addLiteralOption(N, C, D);
   }
   void NotifyRemove(StringRef N) override {
