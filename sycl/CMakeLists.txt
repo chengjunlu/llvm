@@ -532,6 +532,14 @@ add_custom_target(deploy-sycl-toolchain
   install-mlir-cpu-runner
   install-llvm-spirv-headers
   install-LLVMSPIRVLib
+  install-clang
+  install-clang-headers
+  install-clang-libraries
+  install-GenXIntrinsics-headers
+  install-lld
+  install-lldELF
+  install-lldCommon
+  install-lld-headers
 )
 
 # SYCL Runtime documentation

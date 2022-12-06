@@ -243,9 +243,15 @@ include_directories(BEFORE
 if (NOT LLVM_INSTALL_TOOLCHAIN_ONLY)
   install(DIRECTORY include/
     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
+    COMPONENT lld-headers
     FILES_MATCHING
     PATTERN "*.h"
     )
+  add_custom_target(lld-headers DEPENDS )
+  set_target_properties(lld-headers PROPERTIES FOLDER "Misc")
+  add_llvm_install_targets(install-lld-headers
+                           DEPENDS lld-headers
+                           COMPONENT lld-headers)
 endif()
 
 add_subdirectory(Common)
