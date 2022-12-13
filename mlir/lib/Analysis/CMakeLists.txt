@@ -2,6 +2,7 @@ set(LLVM_OPTIONAL_SOURCES
   AliasAnalysis.cpp
   BufferViewFlowAnalysis.cpp
   CallGraph.cpp
+  DataFlowAnalysis.cpp
   DataLayoutAnalysis.cpp
   Liveness.cpp
   SliceAnalysis.cpp

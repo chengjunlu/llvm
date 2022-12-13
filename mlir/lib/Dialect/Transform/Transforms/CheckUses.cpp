@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+#include "mlir/Analysis/DataFlowAnalysis.h"
 #include "mlir/Dialect/Transform/IR/TransformInterfaces.h"
 #include "mlir/Dialect/Transform/Transforms/Passes.h"
 #include "mlir/Interfaces/SideEffectInterfaces.h"
