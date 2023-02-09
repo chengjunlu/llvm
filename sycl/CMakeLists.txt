@@ -535,7 +535,7 @@ add_custom_target(deploy-sycl-toolchain
   install-clang
   install-clang-headers
   install-clang-libraries
-  install-GenXIntrinsics-headers
+ #install-GenXIntrinsics-headers
   install-lld
   install-lldELF
   install-lldCommon
