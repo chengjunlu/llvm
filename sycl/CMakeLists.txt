@@ -544,7 +544,7 @@ add_custom_target(deploy-sycl-toolchain
   install-sancov
   install-sanstats
   install-spirv-to-ir-wrapper
-  install-split-file
+#  install-split-file
   install-sycl-post-link
   install-verify-uselistorder
   install-opencl-aot
@@ -564,6 +564,18 @@ add_custom_target(deploy-sycl-toolchain
   install-mlir-translate
   install-tblgen-lsp-server
   install-mlir-cpu-runner
+  install-llvm-debuginfo-analyzer
+  install-llvm-remarkutil
+  install-sycl-mlir-opt
+  install-SYCLKernelFusion
+  install-mlir-pdll
+  install-MLIRSYCLToGPU
+  install-MLIRSYCLToLLVM
+  install-MLIRSYCLToSPIRV
+  install-MLIRSYCLDialect
+  install-MLIRSYCLTransforms
+  install-MLIRPolygeist
+  install-MLIRPolygeistTransforms
 )
 
 # SYCL Runtime documentation
