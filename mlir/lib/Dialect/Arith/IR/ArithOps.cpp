@@ -9,6 +9,7 @@
 #include <cassert>
 #include <cstdint>
 #include <utility>
+#include <iostream>
 
 #include "mlir/Dialect/Arith/IR/Arith.h"
 #include "mlir/Dialect/CommonFolders.h"
@@ -703,6 +704,51 @@ OpFoldResult arith::RemUIOp::fold(FoldAdaptor adaptor) {
   // remui (x, 1) -> 0.
   if (matchPattern(getRhs(), m_One()))
     return Builder(getContext()).getZeroAttr(getType());
+
+#if 0
+  auto ops = adaptor.getOperands();
+
+    // Try to flod the x % 32 % 8 -> x % 8
+  auto getResultType = [](Attribute attr) -> Type {
+    if (auto typed = attr.dyn_cast_or_null<TypedAttr>())
+      return typed.getType();
+    return {};
+  };
+  if (Type rhsType = getResultType(ops[1])) {
+    if (arith::RemUIOp lhsOp = this->getLhs().getDefiningOp<arith::RemUIOp>()) {
+      SmallVector<Attribute, 2> operandConstants;
+      // Check to see if any operands to the operation is constant and whether
+      // the operation knows how to constant fold itself.
+      operandConstants.assign(lhsOp.getNumOperands(), Attribute());
+      for (unsigned i = 0, e = lhsOp.getNumOperands(); i != e; ++i)
+        matchPattern(lhsOp.getOperand(i), m_Constant(&operandConstants[i]));
+      arith::RemUIOp::FoldAdaptor lhsAdaptor(operandConstants, lhsOp->getAttrDictionary(), lhsOp->getRegions());
+      auto lhsValueOps = lhsAdaptor.getOperands();
+      if (Type lhsConstType = getResultType(lhsValueOps[1])) {
+
+        std::cout << "!!!!!!const folder binary op!!!!!!" << std::endl;
+        this->print(llvm::outs());
+        std::cout << std::endl;
+
+        auto result = constFoldBinaryOp<IntegerAttr>({ops[1], lhsValueOps[1]},
+                                                     [&](APInt a, const APInt &b) {
+                                                       if (*a.getRawData() > *b.getRawData()) {
+                                                         return b.urem(a);
+                                                       } else if (*a.getRawData() == *b.getRawData()) {
+                                                           return a;
+                                                       } else {
+                                                         return a.urem(b);
+                                                       }
+                                                     });
+
+        std::cout << "!!!!!!const value result!!!!!!" << std::endl;
+        result.print(llvm::outs());
+        std::cout << std::endl;
+        this->setOperand(0, lhsOp.getLhs());
+      }
+    }
+  }
+#endif
 
   // Don't fold if it would require a division by zero.
   bool div0 = false;
