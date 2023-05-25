@@ -856,8 +856,7 @@ uint32_t Serializer::prepareConstantInt(Location loc, IntegerAttr intAttr,
   auto resultID = getNextID();
   APInt value = intAttr.getValue();
   unsigned bitwidth = value.getBitWidth();
-  bool isSigned = intAttr.getType().isSignedInteger();
-//  bool isSigned = value.isSignedIntN(bitwidth);
+  bool isSigned = value.isSignedIntN(bitwidth);
 
   auto opcode =
       isSpec ? spirv::Opcode::OpSpecConstant : spirv::Opcode::OpConstant;
