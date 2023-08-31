@@ -167,6 +167,15 @@ uint32_t Serializer::getOrCreateFunctionID(StringRef fnName) {
   return funcID;
 }
 
+// uint32_t Serializer::getOrCreateFunctionPointerINTELID(StringRef fnName) {
+//   auto funcPtrINTELID = funcPointerINTELIDMap.lookup(fnName);
+//   if (!funcPtrINTELID) {
+//     funcPtrINTELID = getNextID();
+//     funcPointerINTELIDMap[fnName] = funcPtrINTELID;
+//   }
+//   return funcPtrINTELID;
+// }
+
 void Serializer::processCapability() {
   for (auto cap : module.getVceTriple()->getCapabilities())
     encodeInstructionInto(capabilities, spirv::Opcode::OpCapability,
@@ -527,6 +536,22 @@ LogicalResult Serializer::prepareBasicType(
         return emitError(loc, "cannot decorate ")
                << pointeeStruct << " with Block decoration";
     }
+
+    return success();
+  }
+
+  // Handle FunctionPointerINTELType.
+  if (auto funcPtrINTELType = dyn_cast<spirv::FunctionPointerINTELType>(type)) {
+    uint32_t functionTypeID = 0;
+
+    if (failed(processTypeImpl(loc, funcPtrINTELType.getFunctionType(),
+                               functionTypeID, serializationCtx)))
+      return failure();
+
+    typeEnum = spirv::Opcode::OpTypePointer;
+    operands.push_back(
+        static_cast<uint32_t>(funcPtrINTELType.getStorageClass()));
+    operands.push_back(functionTypeID);
 
     return success();
   }
@@ -1218,6 +1243,9 @@ LogicalResult Serializer::processOperation(Operation *opInst) {
       })
       .Case([&](spirv::UndefOp op) { return processUndefOp(op); })
       .Case([&](spirv::VariableOp op) { return processVariableOp(op); })
+      .Case([&](spirv::INTELConstantFunctionPointerOp op) {
+        return processINTELConstantFunctionPointerOp(op);
+      })
 
       // Then handle all the ops that directly mirror SPIR-V instructions with
       // auto-generated methods.

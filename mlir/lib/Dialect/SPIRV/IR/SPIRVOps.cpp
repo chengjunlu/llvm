@@ -1520,6 +1520,15 @@ LogicalResult spirv::ReferenceOfOp::verify() {
 
   return success();
 }
+//===----------------------------------------------------------------------===//
+// spirv.INTEL.ConstantFunctionPointer
+//===----------------------------------------------------------------------===//
+LogicalResult INTELConstantFunctionPointerOp::verify() { return success(); }
+
+//===----------------------------------------------------------------------===//
+// spirv.INTEL.FunctionPointerCall
+//===----------------------------------------------------------------------===//
+LogicalResult INTELFunctionPointerCallOp::verify() { return success(); }
 
 //===----------------------------------------------------------------------===//
 // spirv.SpecConstant
