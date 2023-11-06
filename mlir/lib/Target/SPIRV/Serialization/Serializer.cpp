@@ -274,6 +274,8 @@ LogicalResult Serializer::processDecoration(Location loc, uint32_t resultID,
   case spirv::Decoration::VectorComputeCallableFunctionINTEL:
   case spirv::Decoration::VectorComputeFunctionINTEL:
   case spirv::Decoration::VectorComputeVariableINTEL:
+  case spirv::Decoration::ReferencedIndirectlyINTEL:
+  case spirv::Decoration::StackCallINTEL:
     // For unit attributes, the args list has no values so we do nothing
     if (auto unitAttr = dyn_cast<UnitAttr>(attr.getValue()))
       break;

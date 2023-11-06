@@ -304,6 +304,8 @@ LogicalResult spirv::Deserializer::processDecoration(ArrayRef<uint32_t> words) {
   case spirv::Decoration::VectorComputeCallableFunctionINTEL:
   case spirv::Decoration::VectorComputeFunctionINTEL:
   case spirv::Decoration::VectorComputeVariableINTEL:
+  case spirv::Decoration::ReferencedIndirectlyINTEL:
+  case spirv::Decoration::StackCallINTEL:
     if (words.size() != 2) {
       return emitError(unknownLoc, "OpDecoration with ")
              << decorationName << "needs a single target <id>";

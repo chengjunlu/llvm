@@ -1523,12 +1523,12 @@ LogicalResult spirv::ReferenceOfOp::verify() {
 //===----------------------------------------------------------------------===//
 // spirv.INTEL.ConstantFunctionPointer
 //===----------------------------------------------------------------------===//
-LogicalResult INTELConstantFunctionPointerOp::verify() { return success(); }
+LogicalResult spirv::INTELConstantFunctionPointerOp::verify() { return success(); }
 
 //===----------------------------------------------------------------------===//
 // spirv.INTEL.FunctionPointerCall
 //===----------------------------------------------------------------------===//
-LogicalResult INTELFunctionPointerCallOp::verify() { return success(); }
+LogicalResult spirv::INTELFunctionPointerCallOp::verify() { return success(); }
 
 //===----------------------------------------------------------------------===//
 // spirv.SpecConstant
