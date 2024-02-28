@@ -157,7 +157,7 @@ createGenISADPAS(GENX::MatrixDPASOp op, llvm::IRBuilderBase &builder,
   auto *aOrigTy = cast<llvm::FixedVectorType>(a->getType());
   auto bitWidth = aOrigTy->getNumElements() *
                   aOrigTy->getElementType()->getScalarSizeInBits();
-  auto *aTy = llvm::FixedVectorType::get(builder.getInt32Ty(), bitWidth / 32);
+  auto *aTy = llvm::FixedVectorType::get(builder.getInt16Ty(), bitWidth / 16);
   if (a->getType() != aTy)
     a = builder.CreateBitCast(a, aTy);
 

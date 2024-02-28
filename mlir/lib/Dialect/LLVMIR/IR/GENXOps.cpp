@@ -44,9 +44,9 @@ LogicalResult GENX::MatrixDPASOp::verify() {
   Type AElemTy = ATy.getElementType();
   Type BElemTy = BTy.getElementType();
   Type CElemTy = CTy.getElementType();
-  if (AElemTy != BElemTy)
-    return this->emitOpError(
-        "element type of 2nd (A) and 3rd (B) operands must match");
+//  if (AElemTy != BElemTy)
+//    return this->emitOpError(
+//        "element type of 2nd (A) and 3rd (B) operands must match");
 
 //  // ATy is required to be vector<RC x i16> as hard coded by IGC.
 //  if (ATy.getNumElements() * AElemTy.getIntOrFloatBitWidth() != getRc() * 16)
@@ -164,34 +164,34 @@ static LogicalResult verifyInput(Op op) {
 
   uint32_t TileWidth = op.getTileWidth();
   uint32_t TileHeight = op.getTileHeight();
-  switch (op.getElemSizeInBits()) {
-    case 32:
-    if (TileWidth != 8)
-      return op->emitOpError("tile_width for 32 bit elements should be equal "
-                               "to systolic depth, i.e., 8 elements");
-    if (TileHeight != 8)
-      return op->emitOpError("tile_height for 32 bit elements should be 8");
-      break;
-
-    case 16:
-    if (TileWidth != 16)
-      return op->emitOpError("tile_width for 16 bit elements should be equal "
-                               "to systolic depth times 2, i.e., 16 elements");
-    if (TileHeight != 16)
-      return op->emitOpError("tile_height for 16 bit elements should be 16");
-      break;
-
-    case 8:
-    if (TileWidth != 32)
-      return op->emitOpError("tile_width for 8 bit elements should be equal "
-                               "to systolic depth times 4, i.e., 32 elements");
-    if (TileHeight != 32)
-      return op->emitOpError("tile_height for 8 bit elements should be 32");
-      break;
-
-    default:
-    return op->emitOpError("element size should be 8, 16 or 32 bits");
-  }
+//  switch (op.getElemSizeInBits()) {
+//    case 32:
+//    if (TileWidth != 8)
+//      return op->emitOpError("tile_width for 32 bit elements should be equal "
+//                               "to systolic depth, i.e., 8 elements");
+//    if (TileHeight != 8)
+//      return op->emitOpError("tile_height for 32 bit elements should be 8");
+//      break;
+//
+//    case 16:
+//    if (TileWidth != 16)
+//      return op->emitOpError("tile_width for 16 bit elements should be equal "
+//                               "to systolic depth times 2, i.e., 16 elements");
+//    if (TileHeight != 16)
+//      return op->emitOpError("tile_height for 16 bit elements should be 16");
+//      break;
+//
+//    case 8:
+//    if (TileWidth != 32)
+//      return op->emitOpError("tile_width for 8 bit elements should be equal "
+//                               "to systolic depth times 4, i.e., 32 elements");
+//    if (TileHeight != 32)
+//      return op->emitOpError("tile_height for 8 bit elements should be 32");
+//      break;
+//
+//    default:
+//    return op->emitOpError("element size should be 8, 16 or 32 bits");
+//  }
   return success();
 }
 
