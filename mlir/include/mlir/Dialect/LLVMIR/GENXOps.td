@@ -255,8 +255,8 @@ def PrecisionType : I32EnumAttr<"PrecisionType", "GENX precision type",
     I32EnumAttrCase<"S2",               6>,
     I32EnumAttrCase<"BF8",              7>,
     I32EnumAttrCase<"TF32",             8>,
-    I32EnumAttrCase<"BF16",             9>,
-    I32EnumAttrCase<"FP16",             10>
+    I32EnumAttrCase<"BF16",             11>,
+    I32EnumAttrCase<"FP16",             12>
   ]> {
   let genSpecializedAttr = 0;
   let cppNamespace = "::mlir::GENX";
