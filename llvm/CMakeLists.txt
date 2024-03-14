@@ -1365,7 +1365,9 @@ foreach( binding ${LLVM_BINDINGS_LIST} )
   endif()
 endforeach()
 
+if( INTEL_INCLUDE_LLVM_PROJECT )
 add_subdirectory(projects)
+endif()
 
 if( LLVM_INCLUDE_TOOLS )
   add_subdirectory(tools)
