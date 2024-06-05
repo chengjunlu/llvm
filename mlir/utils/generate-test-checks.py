@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/chengjun/workspace/CLionProject/cpython/python
 """A script to generate FileCheck statements for mlir unit tests.
 
 This script is a utility to add FileCheck patterns to an mlir file.
